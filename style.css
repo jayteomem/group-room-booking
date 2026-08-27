@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 1. Design values */
+:root {
+    --color-primary: #2563eb;
+    --color-text: #1f2937;
+    --color-bg: #f5f7fa;
+    --color-surface: #ffffff;
+    --spacing: 1rem;
+    --radius: 8px;
+}
+
+/* 2. Base */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+img { max-width: 100%; height: auto; }
+
+/* 3. Layout */
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+/* 4. Navigation */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+/* 5. Components */
+.rooms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.room-card {
+    flex: 1 1 260px;
+    padding: var(--spacing);
+    background: var(--color-surface);
+    border-radius: var(--radius);
+}
+.btn {
+    display: inline-block;
+    padding: .75rem 1rem;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+}
+
+.btn:hover { filter: brightness(.9); }
+.btn:focus-visible { outline: 3px solid #111827; outline-offset: 3px; }
+
+/* 6. Responsive */
+@media (max-width: 700px) {
+    nav ul { flex-direction: column; }
+}
